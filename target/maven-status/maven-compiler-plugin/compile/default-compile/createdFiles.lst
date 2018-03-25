@@ -1,0 +1,11 @@
+pl\sluski\notelly\controller\UserController.class
+pl\sluski\notelly\entity\TUser.class
+pl\sluski\notelly\entity\TNote.class
+pl\sluski\notelly\dao\NoteDao.class
+pl\sluski\notelly\DBManager.class
+pl\sluski\notelly\dao\UserDao.class
+pl\sluski\notelly\entity\TNote_.class
+pl\sluski\notelly\entity\TUser_.class
+pl\sluski\notelly\WebConfig.class
+pl\sluski\notelly\UserServices.class
+pl\sluski\notelly\dao\Dao.class
