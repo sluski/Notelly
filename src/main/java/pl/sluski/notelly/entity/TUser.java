@@ -20,6 +20,7 @@ public class TUser implements Serializable {
     @Column(unique = true)
     private String nick;
     private String email;
+    private String password;
     
     
     public Long getId() {
@@ -46,6 +47,14 @@ public class TUser implements Serializable {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -69,6 +78,10 @@ public class TUser implements Serializable {
     @Override
     public String toString() {
         return "pl.sluski.notelly.entity.TUser[ id=" + id + " ]";
+    }
+    
+    public String getTableName(){
+        return "clients";
     }
     
 }

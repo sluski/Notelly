@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/login.css" />
+    </h:head>
+    <h:body>
+    <h:form>
+        <div id="container">
+            <div class="additional"></div>
+            <div id="loginField">
+                <p:outputLabel value="Sign in" style="margin-left: auto; margin-right: auto; font-size: 40px; font-family: Comic Sans MS; display: block; padding-top: 26px;" />
+                <p:outputLabel id="message" value="#{login.message}" style="display: block; width: 100%; color: red; min-height: 19px; padding-bottom: 2px; padding-top: 12px; font-size: 18px; margin: 0; font-family: Comic Sans MS;"/>
+                <p:inputText class="login_field" value="#{login.userLogin}" style="margin: 5px; margin-top: 1px;" a:placeholder="Login or Email Address"/><br/>
+                <p:password class="login_field" value="#{login.password}" style="margin: 5px;" a:placeholder="Password"/> <br/>
+                <p:commandButton id="login_button" value="Login" update="message" action="#{login.login()}" style="margin: 5px;" /><br/>
+                <div id="links">
+                    <p:commandLink id="register_link" value="Register" style="text-align: left; display: block; float: left; width: 185px; margin-left: 65px; font-size: 15px;" /> 
+                    <p:commandLink id="reset_password" value="Forgot password?" style="text-align: right; display: block; float: left; width: 190px; margin-right: 60px; font-size: 15px;" />
+                </div>
+                
+            </div>
+            <div class="additional"></div>
+        </div>
+    </h:form>
+    </h:body>
+</html>
+

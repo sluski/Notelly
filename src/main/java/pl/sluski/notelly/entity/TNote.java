@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
  *
  * @author Sluski
  */
-@Entity
+@Entity (name = "notes")
 public class TNote implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -122,4 +122,7 @@ public class TNote implements Serializable {
         return "pl.sluski.notelly.entity.TNote[ id=" + id + " ]";
     }
     
+    public String getTableName(){
+        return "notes";
+    }
 }

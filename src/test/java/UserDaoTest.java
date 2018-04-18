@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import pl.sluski.notelly.dao.Dao;
 import pl.sluski.notelly.dao.UserDao;
 import pl.sluski.notelly.entity.TUser;
 
@@ -16,12 +15,10 @@ import pl.sluski.notelly.entity.TUser;
 public class UserDaoTest {
 
     private final UserDao userDao;
-    private final Dao<TUser> dao;
     private TUser user;
 
     public UserDaoTest() {
         userDao = new UserDao();
-        dao = new Dao<>();
         
     }
 
@@ -37,6 +34,7 @@ public class UserDaoTest {
     public void setUp() {
         user = new TUser();
         user.setNick("sluski");
+        user.setPassword("qwerty");
         user.setEmail("example@test.com");
     }
 
@@ -46,20 +44,19 @@ public class UserDaoTest {
 
     }
     
-
     @Test
     public void add_addCorrectUser_addedToDB() {
+        removeAll_tryRemoveAllUsers_tableUserSizeEqualZero();
         userDao.add(user);
         assertTrue("DB should have one row, user is not added", userDao.takeAll().size() > 0);
 
     }
 
-//    @Test
-//    public void removeAll_tryRemoveAllUsers_tableUserSizeEqualZero() {
-//        if(userDao.takeAll().isEmpty()) userDao.add(user);
-//        userDao.removeAll();
-//        assertTrue("All users should be deleted, one or more objects are still in table", userDao.takeAll().isEmpty());
-//    }
+    public void removeAll_tryRemoveAllUsers_tableUserSizeEqualZero() {
+        if(userDao.takeAll().isEmpty()) userDao.add(user);
+        userDao.removeAll();
+        assertTrue("All users should be deleted, one or more objects are still in table", userDao.takeAll().isEmpty());
+    }
 //
 //    @Test
 //    public void takeSingleUserByNick_findUser_singleUser() {

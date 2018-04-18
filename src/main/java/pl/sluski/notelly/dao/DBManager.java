@@ -1,4 +1,4 @@
-package pl.sluski.notelly;
+package pl.sluski.notelly.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

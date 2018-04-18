@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#container{
+    width: 100%; 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #3B193B;
+    
+}
+
+#loginField{
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    min-height: 40vh;
+    text-align: center;
+    background-color: white;
+    
+}
+
+.additional{
+    min-height: 30vh;
+    width: 100%;
+    
+}
+
+.login_field{
+    width: 360px;
+    height: 40px;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+    
+}
+
+.login_field:focus{
+    border: 1px solid green;
+    font-family: Comic Sans MS;
+    
+}
+
+
+.ui-button{
+    width: 374px;
+    height: 50px;
+    background-color: #46B664;
+    color: white;
+    font-size: 22px;
+    font-family: Comic Sans MS;
+    
+}
+
+#sign_in{
+    margin-left: auto; 
+    margin-right: auto; 
+    font-size: 38px; 
+    font-family: Comic Sans MS; 
+    display: block; 
+    padding-top: 24px; 
+    margin-bottom: 0px;
+    
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+    
+}

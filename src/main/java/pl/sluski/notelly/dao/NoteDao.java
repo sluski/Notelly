@@ -2,25 +2,24 @@ package pl.sluski.notelly.dao;
 
 import java.util.List;
 import pl.sluski.notelly.entity.TNote;
-import pl.sluski.notelly.entity.TUser;
 
 /**
  *
  * @author Sluski
  */
-public class NoteDao {
-    private final Dao dao;
+public class NoteDao extends Dao<TNote>{
     
     public NoteDao(){
-        dao = new Dao();
+
     }
     
+    @Override
     public void add(TNote note){
-        dao.add(note);
+        super.add(note);
     }
     
     public List<TNote> takeAllNotes(){
-        return null;
+        return super.findAllObjects(new TNote().getTableName());
     }
     
     public void removeAllNotes(){

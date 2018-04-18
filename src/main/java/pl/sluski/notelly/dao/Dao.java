@@ -2,8 +2,8 @@ package pl.sluski.notelly.dao;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
-import pl.sluski.notelly.DBManager;
 
 /**
  *
@@ -26,7 +26,7 @@ public class Dao<T> {
     }
     
     // R
-    public T findSingleObject(String tableName, String findBy, String value) {
+    public T findSingleObject(String tableName, String findBy, String value) throws NoResultException {
         entityManager = DBManager.createInstance().getEntityManager();
         entityManager.getTransaction().begin();
         Query query = entityManager.createQuery("SELECT e FROM " + tableName + " e WHERE e." 

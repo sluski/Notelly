@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+#container{
+    background-color: #B3F5FA;
+    width: 100%;
+    min-height: 96vh;
+    padding-top: 4vh;
+}
+
+#menu{
+    background-color: #FFD27F;
+    min-width: 100%;
+    min-height: 60px;
+}
+
+#logo{
+    margin-left: 40px;
+    width: 155px;
+    padding-top: 5px;
+    font-size: 44px;
+    font-family: Courier New;
+    letter-spacing: 2px;
+    float: left;
+    display: block;
+    
+}
+
+#account{
+     width: 100px;
+     min-height: 50px;
+     text-align: center;
+     margin-left: auto;
+     padding-right: 20px;
+     font-size: 24px;
+     font-family: Comic Sans MS;
+     padding-top: 10px;
+     border-radius: 10px;
+     padding-left: 20px;
+     margin-right: 5px;
+    
+}
+
+#account:hover{
+     width: 100px;
+     background-color: lightblue;
+     min-height: 50px;
+     text-align: center;
+     margin-left: auto;
+     padding-right: 20px;
+     font-size: 24px;
+     font-family: Comic Sans MS;
+     padding-top: 10px;
+     border-radius: 10px;
+     padding-left: 20px;
+     margin-right: 5px;
+    
+}
+
+#notes{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.note{
+    margin-left: 60px;
+    padding-top: 20px;
+    float: left;
+    
+}
+
+.note_title{
+    width: 320px;
+    min-height: 40px;
+    background-color: #EACA8E;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 24px;
+    font-family: Palatino Linotype;
+    padding-top: 5px;
+    text-align: center;
+    
+}
+
+.note_content{
+    width: 312px;
+    min-height: 295px;
+    max-height: 70vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url('../images/note.png');
+    font-size: 18px;
+    
+}
+
+textarea { border: none; }
+
+
+

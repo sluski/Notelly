@@ -17,25 +17,25 @@ public class UserDao extends Dao<TUser> {
 
     //R
     public TUser findSingleUserByNick(String nick) {
-        return (TUser) super.findSingleObject("clients", "nick", nick);
+        return (TUser) super.findSingleObject(new TUser().getTableName(), "nick", nick);
     }
 
     public TUser findSingleUserByEmail(String email) {
-        return (TUser) super.findSingleObject("clients", "email", email);
+        return (TUser) super.findSingleObject(new TUser().getTableName(), "email", email);
     }
 
     public List<TUser> takeAll() {
-        return super.findAllObjects("clients");
+        return super.findAllObjects(new TUser().getTableName());
     }
 
     //U
     public void updateEmail(String newEmail, String userNick) {
-        super.updateSingleObject("clients", "email", newEmail, userNick);
+        super.updateSingleObject(new TUser().getTableName(), "email", newEmail, userNick);
     }
 
     //D
     public void removeAll() {
-        super.removeAllObjects("clients");
+        super.removeAllObjects(new TUser().getTableName());
     }
 
     public void remove(TUser user) {
